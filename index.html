@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Zelda Hangman
+  </title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+  <link href="assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  </script>
+</head>
+
+<body>
+
+  <div class="main-container">
+    <div class="jumbo">
+      <img src="assets/images/zelda-title.png" id="zelda-title">
+      <h1>Hangman!</h1>
+      <h2>Guess the word! Press any key to get started!</h2>
+      <a href="https://github.com/lagilles/Word-Guess-Game">
+        <p id="repo">*Github Repo*</p>
+      </a>
+    </div>
+
+    <audio loop id="battlenoise" autoplay="autoplay" src="assets/sounds/battle-audio.mp3"></audio>
+    <audio loop id="back-noise" autoplay="autoplay" src=""></audio>
+
+    <div class="enemy">
+        <div class="bokoblin-gif">
+          <img id="bokoblin" src="assets/images/bokoblin.gif">
+          <img src="assets/images/mygrass.png" id="battlegrass" />
+        </div>
+      </div>
+      <div class="link">
+        <img id="link" src="assets/images/link.gif">
+      </div>
+      <div id="hangman-space"></div>
+      <div id="wordToGuess"></div>
+      <div id="text-space">
+        <p>
+          Letters guessed:
+        </p>
+        <div id="guesses"></div>
+        <div id="buttons">
+        </div>
+      </div>
+      <div id="messages"></div>
+
+
+    </div>
+    <audio id="battle-audio">
+      <source src= "assets/audio/battle-audio.mp3" type="audio/mpeg">
+    </audio>
+    <!-- this closes main-container -->
+    <script src="assets/javascript/game.js">
+    </script>
+</body>
+
+</html>
