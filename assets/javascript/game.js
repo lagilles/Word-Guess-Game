@@ -15,8 +15,6 @@ var blanksAndSuccesses = [];
 var wrongLetters = [];
 var myMusic;
 
-
-
 // Game Counters
 
 var winCount = 0;
@@ -33,6 +31,8 @@ function startGame(){
 	selectedWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
 	lettersInWord = selectedWord.split("");
 	numBlanks = lettersInWord.length;
+	myMusic = new sound ("battle-audio.mp3");
+	myMusic.play;
 }
 
 function checkLetters (letters) {
@@ -57,7 +57,7 @@ function checkLetters (letters) {
 }
 
 	else {
-		wongLetters.push(letter);
+		wrongLetters.push(letter);
 		guessesLeft--;
 	}
 
@@ -68,7 +68,7 @@ function roundComplete () {
 
 	//update html to reflect most recent info
 
-	document.getElementById("numGuesses").innerHTML = guessesLeft;
+	document.getElementById("guesses").innerHTML = guessesLeft;
 	document.getElementById("wordToGuess").innerHTML = blanksAndSuccesses.join(" ");
 	document.getElementById("guesses").innerHTML = wrongLetters.join(" ");
 
@@ -129,13 +129,9 @@ for (var i = 0; i<numBlanks; i++){
 
 // Main Process
 
-// Initiates the code for the first time
-
-startGame();
-
 // Registers key clicks
 
-document.onkeyup(function(event){
+document.onkeyup = function(event){
 	var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
 	checkLetters(letterGuessed);
 	roundComplete();
@@ -145,13 +141,10 @@ document.onkeyup(function(event){
 	console.log(letterGuessed);
 
 
-})
-
-
-// music
-
-function startGame() {
-	myMusic = new sound ("battle-audio.mp3");
-	myMusic.play;
 }
+
+// Initiates the code for the first time
+
+//startGame();
+// music
 
