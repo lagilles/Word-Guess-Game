@@ -58,12 +58,46 @@ function checkLetters (letters) {
 
 	else {
 		wongLetters.push(letter);
-		guesses++;
+		guessesLeft--;
 	}
 
 };
 
 function roundComplete () {
+	console.log("Wins: " + winCount | "Losses: " + lossCount | "Guesses Left: " + guessesLeft)
+
+	//update html to reflect most recent info
+
+	document.getElementById("numGuesses").innerHTML = guessesLeft;
+	document.getElementById("wordToGuess").innerHTML = blanksAndSuccesses.join(" ");
+	document.getElementById("guesses").innerHTML = wrongLetters.join(" ");
+
+	// check if user won
+
+	if (lettersInWord.toString() == blanksAndSuccesses.toString()) {
+		winCount++;
+		alert("You Won!");
+
+		// update win counter in html
+
+		document.getElementById("winCounter").innerHTML = winCount;
+
+		startGame();
+
+	}
+
+	// check if user lost
+
+	else if (numGuesses == 0){
+		lossCount++;
+		alert("You Lost!");
+
+		// update html
+
+		document.getElementById("lossCounter").innerHTML = lossCount;
+
+		startGame();
+	}
 
 }
 
@@ -104,6 +138,7 @@ startGame();
 document.onkeyup(function(event){
 	var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
 	checkLetters(letterGuessed);
+	roundComplete();
 
 	// Testing and debugging
 
