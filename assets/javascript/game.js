@@ -13,6 +13,9 @@ var lettersInWord = [];
 var numBlanks = 0;
 var blanksAndSuccesses = [];
 var wrongLetters = [];
+var myMusic;
+
+
 
 // Game Counters
 
@@ -38,7 +41,7 @@ function checkLetters (letters) {
 	var isLetterInWord = false;
 
 	for (var i=0; i<numBlanks; i++){
-		if(selectedWord[i]) == letter) {
+		if(selectedWord[i] == letter) {
 			isLetterInWord = true;
 		}
 	};
@@ -47,7 +50,7 @@ function checkLetters (letters) {
 
 	if(isLetterInWord) {
 		for(var i=0; i<numBlanks; i++) {
-			if(selectedWord[i]) == letter) {
+			if(selectedWord[i] == letter) {
 				blanksAndSuccesses[i] = letter;
 		}
 	}
@@ -55,7 +58,7 @@ function checkLetters (letters) {
 
 	else {
 		wongLetters.push(letter);
-		numGuesses++;
+		guesses++;
 	}
 
 };
@@ -79,9 +82,9 @@ for (var i = 0; i<numBlanks; i++){
 // change html 
 
 	document.getElementById("wordToGuess").innerHTML = blanksAndSuccesses.join(" ");
-	document.getElementById("numGuesses").innerHTML = guessesLeft;
-	document.getElementById("winCounter").innerHTML = winCount;
-	document.getElementById("lossCounter").innerHTML = lossCount;
+	document.getElementById("guesses").innerHTML = "Guesses Left: " + guessesLeft;
+	document.getElementById("winCounter").innerHTML = "Wins: " + winCount;
+	document.getElementById("lossCounter").innerHTML = "Losses: " + lossCount;
 
 // debugging
 
@@ -110,9 +113,10 @@ document.onkeyup(function(event){
 })
 
 
+// music
 
-
-
-
-
+function startGame() {
+	myMusic = new sound ("battle-audio.mp3");
+	myMusic.play;
+}
 

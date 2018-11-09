@@ -11,7 +11,6 @@
   <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-  <link href="assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
   </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
@@ -42,13 +41,16 @@
       <div class="link">
         <img id="link" src="assets/images/link.gif">
       </div>
-      <div id="hangman-space"></div>
+      <div id="hangman-space">
+        <div id="winCounter">Wins:</div>
+        <div id="lossCounter">Losses:</div>
+      </div>
       <div id="wordToGuess"></div>
       <div id="text-space">
         <p>
           Letters guessed:
         </p>
-        <div id="guesses"></div>
+        <div id="guesses">Guesses Left:</div>
         <div id="buttons">
         </div>
       </div>
