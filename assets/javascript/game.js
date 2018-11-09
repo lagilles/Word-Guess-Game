@@ -145,6 +145,6 @@ document.onkeyup = function(event){
 
 // Initiates the code for the first time
 
-//startGame();
-// music
+startGame();
+
 
