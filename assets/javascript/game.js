@@ -61,7 +61,7 @@ function checkLetters (letters) {
 };
 
 function roundComplete () {
-	
+
 }
 
 // reset
@@ -78,10 +78,10 @@ for (var i = 0; i<numBlanks; i++){
 
 // change html 
 
-	document.getElementById("wordToGuess").updateHTML = blanksAndSuccesses.join(" ");
-	document.getElementById("numGuesses").updateHTML = guessesLeft;
-	document.getElementById("winCounter").updateHTML = winCount;
-	document.getElementById("lossCounter").updateHTML = lossCount;
+	document.getElementById("wordToGuess").innerHTML = blanksAndSuccesses.join(" ");
+	document.getElementById("numGuesses").innerHTML = guessesLeft;
+	document.getElementById("winCounter").innerHTML = winCount;
+	document.getElementById("lossCounter").innerHTML = lossCount;
 
 // debugging
 
