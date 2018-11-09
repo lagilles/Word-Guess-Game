@@ -28,11 +28,11 @@ var guessesLeft = "";
 // Functions
 
 function startGame(){
-	selectedWord = wordOptions[Math.floor(Math.random() * wordOptions.length)];
+	selectedWord = dict[Math.floor(Math.random() * dict.length)];
 	lettersInWord = selectedWord.split("");
 	numBlanks = lettersInWord.length;
-	myMusic = new sound ("battle-audio.mp3");
-	myMusic.play;
+	myMusic = new Audio ("battle-audio.mp3");
+	myMusic.play();
 }
 
 function checkLetters (letters) {
