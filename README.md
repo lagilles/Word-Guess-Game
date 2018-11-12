@@ -4,7 +4,11 @@ Zelda Hangman
 
 Overview
 
-    A Legend of Zelda: Breath of The Wild themed hangman game. It was created as an assignment for the UNC Coding Bootcamp. It features Javascript which enables the site to be interactive and dynamic, as well as HTML for the bones of the web page and CSS for the styling of the game. I hope you enjoy!
+    A Legend of Zelda: Breath of The Wild themed hangman game. 
+    It was created as an assignment for the UNC Coding Bootcamp. 
+    It features Javascript which enables the site to be interactive and dynamic, 
+    as well as HTML for the bones of the web page and CSS for the styling of the game. 
+    I hope you enjoy!
 
 Requirements:
 
