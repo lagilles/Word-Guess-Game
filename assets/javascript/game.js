@@ -6,7 +6,8 @@ var dict = ["hyrule",
 	"rupees",
 	"divine beasts",
 	"sheikah slate",
-	"korok"];
+	"korok"
+];
 
 var selectedWord = "";
 var lettersInWord = [];
@@ -68,9 +69,7 @@ function checkLetters(letter) {
 				blanksAndSuccesses[i] = letter;
 			}
 		}
-	}
-
-	else {
+	} else {
 		wrongLetters.push(letter);
 		guessesLeft--;
 	}
@@ -101,7 +100,6 @@ function roundComplete() {
 	}
 
 	// check if user lost
-
 	else if (guessesLeft == 0) {
 		lossCount++;
 		alert("You Lost!");

@@ -2,64 +2,57 @@
 <html lang="en-us">
 
 <head>
-  <meta charset="UTF-8">
-  <title>
-    Zelda Hangman
-  </title>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-  </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-  </script>
+    <meta charset="UTF-8">
+    <title>
+        Zelda Hangman
+    </title>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-  <div class="main-container">
-    <div class="jumbo">
-      <img src="assets/images/zelda-title.png" id="zelda-title">
-      <h1>Hangman!</h1>
-      <h2>Guess the word! Press any key to get started!</h2>
-      <a href="https://github.com/lagilles/Word-Guess-Game">
-        <p id="repo">*Github Repo*</p>
-      </a>
-    </div>
-
-    <audio loop id="battlenoise" autoplay="autoplay" src="assets/sounds/battle-audio.mp3"></audio>
-    <audio loop id="back-noise" autoplay="autoplay" src=""></audio>
-
-    <div class="enemy">
-        <div class="bokoblin-gif">
-          <img id="bokoblin" src="assets/images/bokoblin.gif">
-          <img src="assets/images/mygrass.png" id="battlegrass" />
+    <div class="main-container">
+        <div class="jumbo">
+            <img src="assets/images/zelda-title.png" id="zelda-title">
+            <h1>Hangman!</h1>
+            <h2>Guess the word! Press any key to get started!</h2>
+            <a href="https://github.com/lagilles/Word-Guess-Game">
+                <p id="repo">*Github Repo*</p>
+            </a>
         </div>
-      </div>
-      <div class="link">
-        <img id="link" src="assets/images/link.gif">
-      </div>
-      <div id="hangman-space">
-        <div id="winCounter">Wins:</div>
-        <div id="lossCounter">Losses:</div>
-      </div>
-      <div id="wordToGuess"></div>
-      <div id="text-space">
-        <p>
-          Letters guessed:
-        </p>
-        <div id="guesses">Guesses Left:</div>
-        <div id="buttons">
-        </div>
-      </div>
-      <div id="messages"></div>
 
+        <div class="enemy">
+            <div class="bokoblin-gif">
+                <img id="bokoblin" src="assets/images/bokoblin.gif">
+                <img src="assets/images/mygrass.png" id="battlegrass" />
+            </div>
+        </div>
+        <div class="link">
+            <img id="link" src="assets/images/link.gif">
+        </div>
+        <div id="hangman-space">
+            <div id="winCounter">Wins:</div>
+            <div id="lossCounter">Losses:</div>
+        </div>
+        <div id="wordToGuess"></div>
+        <div id="text-space">
+            <p>
+                Letters guessed:
+            </p>
+            <div id="guesses">Guesses Left:</div>
+        </div>
+        <div id="messages"></div>
 
     </div>
     <audio id="battle-audio">
-      <source src= "assets/audio/battle-audio.mp3" type="audio/mpeg">
+        <source src="assets/audio/battle-audio.mp3" type="audio/mpeg">
     </audio>
     <!-- this closes main-container -->
     <script src="assets/javascript/game.js">
